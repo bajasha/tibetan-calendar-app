@@ -186,3 +186,8 @@
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
+
+.group:hover .group-hover\:pause,
+.group:focus-within .group-focus-within\:pause {
+  animation-play-state: paused;
+}

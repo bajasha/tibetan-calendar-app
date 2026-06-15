@@ -37,6 +37,9 @@ const MONTHS_RU = [
   'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
 ]
 
+const legendTextClass = 'text-[10px] md:text-[11px] lg:text-xs leading-snug text-muted-foreground'
+const legendSeparatorClass = cn(legendTextClass, 'text-muted-foreground/50')
+
 // Marquee legend content component
 function MarqueeLegendContent() {
   return (
@@ -44,70 +47,70 @@ function MarqueeLegendContent() {
       {/* Elements */}
       <div className="flex items-center gap-1.5">
         <div className="w-2 h-2 rounded-full bg-element-wood" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Дерево</span>
+        <span className={legendTextClass}>Дерево</span>
       </div>
       <div className="flex items-center gap-1.5">
         <div className="w-2 h-2 rounded-full bg-element-fire" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Огонь</span>
+        <span className={legendTextClass}>Огонь</span>
       </div>
       <div className="flex items-center gap-1.5">
         <div className="w-2 h-2 rounded-full bg-element-earth" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Земля</span>
+        <span className={legendTextClass}>Земля</span>
       </div>
       <div className="flex items-center gap-1.5">
         <div className="w-2 h-2 rounded-full bg-element-metal" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Металл</span>
+        <span className={legendTextClass}>Металл</span>
       </div>
       <div className="flex items-center gap-1.5">
         <div className="w-2 h-2 rounded-full bg-element-water" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Вода</span>
+        <span className={legendTextClass}>Вода</span>
       </div>
       
-      <span className="text-[10px] text-muted-foreground/50">·</span>
+      <span className={legendSeparatorClass}>·</span>
       
       {/* Auspicious day */}
       <div className="flex items-center gap-1.5">
         <div className="w-2 h-2 rounded-full bg-auspicious" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Благоприятный</span>
+        <span className={legendTextClass}>Благоприятный</span>
       </div>
       
-      <span className="text-[10px] text-muted-foreground/50">·</span>
+      <span className={legendSeparatorClass}>·</span>
       
       {/* Event */}
       <div className="flex items-center gap-1.5">
         <div className="w-2 h-2 rounded-full bg-primary" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Событие</span>
+        <span className={legendTextClass}>Событие</span>
       </div>
       
-      <span className="text-[10px] text-muted-foreground/50">·</span>
+      <span className={legendSeparatorClass}>·</span>
       
       {/* Actions */}
       <div className="flex items-center gap-1">
-        <Scissors className="w-2.5 h-2.5 md:w-3 md:h-3 text-muted-foreground/70" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Стрижка</span>
+        <Scissors className="w-2.5 h-2.5 shrink-0 text-muted-foreground/70" />
+        <span className={legendTextClass}>Стрижка</span>
       </div>
       <div className="flex items-center gap-1">
-        <HeartPulse className="w-2.5 h-2.5 md:w-3 md:h-3 text-muted-foreground/70" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Лечение</span>
+        <HeartPulse className="w-2.5 h-2.5 shrink-0 text-muted-foreground/70" />
+        <span className={legendTextClass}>Лечение</span>
       </div>
       <div className="flex items-center gap-1">
-        <Sparkles className="w-2.5 h-2.5 md:w-3 md:h-3 text-muted-foreground/70" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Молитва</span>
+        <Sparkles className="w-2.5 h-2.5 shrink-0 text-muted-foreground/70" />
+        <span className={legendTextClass}>Молитва</span>
       </div>
       <div className="flex items-center gap-1">
-        <Compass className="w-2.5 h-2.5 md:w-3 md:h-3 text-muted-foreground/70" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Путешествие</span>
+        <Compass className="w-2.5 h-2.5 shrink-0 text-muted-foreground/70" />
+        <span className={legendTextClass}>Путешествие</span>
       </div>
       <div className="flex items-center gap-1">
-        <Briefcase className="w-2.5 h-2.5 md:w-3 md:h-3 text-muted-foreground/70" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Дела</span>
+        <Briefcase className="w-2.5 h-2.5 shrink-0 text-muted-foreground/70" />
+        <span className={legendTextClass}>Дела</span>
       </div>
       <div className="flex items-center gap-1">
-        <Heart className="w-2.5 h-2.5 md:w-3 md:h-3 text-muted-foreground/70" />
-        <span className="text-[9px] md:text-[10px] text-muted-foreground">Свадьба</span>
+        <Heart className="w-2.5 h-2.5 shrink-0 text-muted-foreground/70" />
+        <span className={legendTextClass}>Свадьба</span>
       </div>
       
-      <span className="text-[10px] text-muted-foreground/50 mr-4">·</span>
+      <span className={cn(legendSeparatorClass, 'mr-4')}>·</span>
     </div>
   )
 }
@@ -217,9 +220,9 @@ export function CalendarGrid({ onDaySelect, selectedDate, variant = 'default' }:
         </div>
       </div>
       
-      {/* Marquee legend under header - pauses on hover/focus */}
-      <div className="overflow-hidden border-y border-border/50 bg-muted/20 group">
-        <div className="animate-marquee group-hover:pause group-focus-within:pause flex items-center gap-4 md:gap-6 py-1.5 md:py-2 whitespace-nowrap px-4">
+      {/* Marquee legend above weekdays — pauses on hover/focus */}
+      <div className="shrink-0 overflow-hidden border-y border-border/50 bg-muted/20 group">
+        <div className="animate-marquee motion-reduce:animate-none group-hover:pause group-focus-within:pause flex w-max items-center gap-4 md:gap-6 py-1.5 md:py-2 whitespace-nowrap px-4">
           {/* First copy of content */}
           <MarqueeLegendContent />
           {/* Second copy for seamless loop */}
@@ -229,7 +232,7 @@ export function CalendarGrid({ onDaySelect, selectedDate, variant = 'default' }:
       
       {/* Weekday headers */}
       <div className={cn(
-        'grid grid-cols-7 border-b border-border',
+        'shrink-0 grid grid-cols-7 border-b border-border',
         variant === 'minimal' && 'border-none'
       )}>
         {WEEKDAYS_RU.map((day, index) => (
